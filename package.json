@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
-  "homepage": "https://sunil-7777.github.io/portfolio/",
+  "_comment_homepage": "https://sunil-7777.github.io/portfolio/",
+  "homepage": "https://sunill.tech/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,7 +10,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && echo www.sunill.tech > dist/CNAME",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {

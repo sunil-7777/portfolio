@@ -3,9 +3,9 @@ import { useGLTF, useAnimations, useTexture } from '@react-three/drei';
 
 const Character = ({ currentAnimationName }) => {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF('/portfolio/stacy.glb');
+  const { nodes, materials, animations } = useGLTF('/stacy.glb');
   const { actions } = useAnimations(animations, group);
-  const texture = useTexture('/portfolio/stacy.jpg');
+  const texture = useTexture('/stacy.jpg');
 
   useEffect(() => {
     actions[currentAnimationName]?.reset().fadeIn(0.5).play();
@@ -33,6 +33,6 @@ const Character = ({ currentAnimationName }) => {
   );
 };
 
-useGLTF.preload('/portfolio/stacy.glb');
+useGLTF.preload('/stacy.glb');
 
 export default Character;
